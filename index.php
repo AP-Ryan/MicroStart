@@ -1,3 +1,6 @@
+<?php
+session_start();
+?>
 <!DOCTYPE html>
 <html style="font-size: 16px;">
 
@@ -38,7 +41,6 @@
 <body>
 <header>
 <?php
-session_start();
   if(!isset($_SESSION['id'])) {
 
 ?>
