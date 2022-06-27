@@ -15,152 +15,155 @@ if ($nomeProduto == null) {
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="./css/styleDetalhe.css">
-  <!-- CSS bootstrap -->
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
-  <!-- JavaScript bootstrap -->
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500" rel="stylesheet">
+  <!-- CSS -->
+  <meta name="robots" content="noindex,follow" />
+  <link rel="stylesheet" href="css/styleDetalhe.css">
   <title><?= $nomeProduto ?></title>
 </head>
 
+<?php
+if (!isset($_SESSION['id'])) {
+  include_once("navs/navAlt.php");
+} else {
+  include_once("navs/navSairAlt.php");
+}
+?>
 
-<body class="u-body u-xl-mode">
-  <!-- Carousel-->
-  <div style="margin: 15px;">
-    <a href="./produtos.php">
-      <button type="button" class="btn" style="border-radius:5px; width: 90px; background-color:rgb(71,138,201); color: white;">
-        <h4>Voltar</h4>
-      </button>
-    </a>
-  </div>
+<body style="background: -webkit-linear-gradient(to left, rgb(153, 206, 255), rgb( 233, 243, 250));
 
-  <header class="u-clearfix u-header u-header" id="sec-7c5f">
-    <div class="u-clearfix u-sheet u-valign-middle u-sheet-1">
+background: linear-gradient(to left,rgb(153, 206, 255), rgb( 233, 243, 250));">
+
+  <main class="container">
 
 
-      <?php
-      $clienteDao = new ClienteDao();
-      if(!isset($_SESSION['id'])) {
-        $linhasCli = $clienteDao->read(null);
-        $taxa = "um valor minino";
-        $frete = "Preços imperdiveis";
-      } else {
-        $linhasCli = $clienteDao->read($_SESSION['id']);
-        foreach ($linhasCli as $linhaCli) {
-          if ($linhaCli['plano_atual'] == "G") {
-            $taxa = "14%";
-            $frete = "Frete R$50";
-          } elseif ($linhaCli['plano_atual'] == "P") {
-            $taxa = "7%";
-            $frete = "Frete Gratis";
-          }
+    <?php
+    $clienteDao = new ClienteDao();
+    if (!isset($_SESSION['id'])) {
+      $linhasCli = $clienteDao->read(null);
+      $taxa = "um valor minino";
+      $frete = "Preços imperdiveis";
+    } else {
+      $linhasCli = $clienteDao->read($_SESSION['id']);
+      foreach ($linhasCli as $linhaCli) {
+        if ($linhaCli['plano_atual'] == "G") {
+          $taxa = "14%";
+          $frete = "Frete R$50";
+        } elseif ($linhaCli['plano_atual'] == "P") {
+          $taxa = "7%";
+          $frete = "Frete Gratis";
         }
       }
+    }
 
-      $produtoDao = new ProdutoDao();
-      $linhas = $produtoDao->read_prod_nome($nomeProduto);
-      foreach ($linhas as $linha) {
-      ?>
+    $produtoDao = new ProdutoDao();
+    $linhas = $produtoDao->read_prod_nome($nomeProduto);
+    foreach ($linhas as $linha) {
+    ?>
 
-        <div id="detalhesProd">
-          <form action="../controller/pagamento.php" method="post">
-            <section class="u-align-center u-clearfix u-section-1" id="sec-4496">
-              <div class="u-clearfix u-sheet u-valign-middle u-sheet-1">
-                <div class="u-container-style u-expanded-width u-product u-product-1">
-                  <div class="u-container-layout u-valign-middle-lg u-valign-middle-xl u-valign-top-sm u-valign-top-xs u-container-layout-1"  style="justify-content: center; align-items: center; display:flex;">
-                    <!--imagem-->
-                    <Table style="float:left">
-                    <tr>
-                    <img alt="" style="margin-left:300px; height: 800px; width: 1000px; margin-left: 30px;" class="u-expanded-width-sm u-expanded-width-xs u-image u-image-default u-product-control u-image-1" src="img/produtos/<?=$linha['imagem']?>">
+      <form action="../controller/pagamento.php" method="post">
+        <section id="sec-4496">
+          <!--imagem-->
+          <Table>
+            <tr>
 
-                    </tr>
-                  </Table>
-                    <!--/imagem-->
-                    <div class="u-align-center-sm u-align-center-xs u-align-left-lg u-align-left- u-align-left-xl u-container-style u-expanded-width-sm u-expanded-width-xs u-group u-shape-rectangle u-group-1" style="">
-                      <div class="u-container-layout u-valign-middle u-container-layout-2">
-                      <div class="container">
-                        <h2 style="color:rgb(66, 136, 187); font-family: candara;text-transform: uppercase; font-weight: bolder; text-align: left;">
-                          <?= $nomeProduto ?>
-                        </h2>
-                              <!-- não mexer -->
-                              <input type="hidden" value="<?=$linha['idProduto']?>" name="idProduto">
-                              <input type="hidden" value="<?=$nomeProduto?>" name="nomeProduto">
-                              <hr style="dotted #cecece;">
+              <!-- Left Column / Headphones Image -->
+              <div class="left-column">
+                <img alt="" style="width: 500px; height: 500px;" src="img/produtos/<?= $linha['imagem'] ?>">
+              </div>
 
-                              <div class="u-custom-font u-font-merriweather u-product-control u-product-price u-product-price-1">
-                                <div class="u-price-wrapper u-spacing-10">
-                                  <div class="u-price u-text-palette-4-base" style="color: green; font-family: calibri; font-size: x-large; font-weight: bold;">$<?= $linha['Preco'] ?></div>
-                                  <!-- /não mexer -->
-                                  <input type="hidden" value="<?= $linha['Preco']?>" name="precoLote">
-                                </div>
-                              </div>
-                              <div style="font-family: calibri; font-size: x-large; font-weight: bold; color: black;">
-                                <p> <?= $linha['Descricao'] ?></p>
-                              </div>
-                              <div style="font-family: calibri; font-size: larger; font-weight: bold; color: black;">
-                                <h4 style="color:rgb(66, 136, 187); font-family: calibri;text-transform: uppercase; font-weight: bolder;">
-                                  Detalhes:
-                                </h4>
-                                <p for="cxTaxa">Taxa adicional de <?= $taxa ?></br>
-                                  Quantidade de itens por lote: <?= $linha['Quantidade'] ?> </br>
-                                  Tamanhos: <?= $linha['Tamanho'] ?></br>
-                                  Disponíveis: <?= $linha['Disponivel'] ?></br>
-                                  Descrição: <?= $linha['Descricao'] ?></br>
-                                </p>
-                              </div>
-                              </br>
-                              <div>
-                                <label for="cxDisponivel" style="font-family: calibri; font-size: x-large; font-weight: bold; color: rgb(66, 136, 187);">
-                                  Escolha quantos lotes deseja:
-                                </label>
-                                <input required min="1" max="<?= $linha['Disponivel'] ?>" type="number" name="quantidadeComprar" id="cxDisponivel" style="border-style: groove; border-radius: 5px; border-color: rgba(255, 255, 255, 0.422);">
-                              </div>
-                              <div style="font-family: calibri; font-size: large; ">
-                                <p> <label for="envio" style="color:rgb(66, 136, 187); font-family: calibri;font-weight: bolder; font-size: x-large;">
-                                    Método de envio:
-                                  </label>
-                                  <select required name="tipoEnvio" id="envio" style="border-style: groove; border-radius: 5px; border-color: grey;">
-                                    <option disabled selected>Selecione...</option>
-                                    <option value="1">Sedex (<?= $frete ?>)</option>
-                                    <option value="2">Pac (<?= $frete ?>)</option>
-                                    <option value="3">JetLog (<?= $frete ?>)</option>
-                                    <option value="4">Retirada</option>
-                                  </select>
-                                </p>
-                              </div>
-                              </br>
-                              <?php
-                              if (isset($_SESSION['id'])) {
-                              ?>
-                                <button class="u-btn u-button-style u-hover-grey-75 u-palette-4-base u-product-control u-btn-1" style="background-color:rgb(66, 136, 187); border-radius: 5px; color:white; font-weight: bold; margin-left: 100px;">
-                                  Comprar
-                                </button>
+            </tr>
+          </Table>
+          <!--/imagem-->
 
-                              <?php
-                              } else {
-                              ?>
-                                <a href="loginCli.php">Faça login</a>
-                              <?php
-                              }
-                              ?>
-                            </div>
-                      </div>
+          <div class="right-column">
+
+            <!-- Product Description -->
+            <div class="product-description">
+              <h1><?= $nomeProduto ?></h1>
+              <p><?= $linha['Descricao'] ?></p>
+            </div>
+
+            <!-- não mexer -->
+            <input type="hidden" value="<?= $linha['idProduto'] ?>" name="idProduto">
+            <input type="hidden" value="<?= $nomeProduto ?>" name="nomeProduto">
+            <!-- /não mexer -->
+
+            <!-- Product Configuration -->
+            <div class="product-configuration">
+
+              <!-- Cable Configuration -->
+              <div class="cable-config">
+                <span>Detalhes</span>
+
+                <div class="cable-choose">
+
+                  <p>Taxa adicional de <?= $taxa ?></p>
+                  <p>Quantidade de itens por lote: <?= $linha['Quantidade'] ?></p>
+                  <p>Tamanhos: <?= $linha['Tamanho'] ?></p>
+                  <p>Lotes disponíveis: <?= $linha['Disponivel'] ?></p>
+
+                  <label for="cxDisponivel">
+                    Escolha quantos lotes deseja:
+                  </label>
+                  <input required min="1" max="<?= $linha['Disponivel'] ?>" type="number" name="quantidadeComprar" id="cxDisponivel">
+
+                  <select required="" name="tipoEnvio" id="envio">
+                    <option disabled="" selected="">Metodo de Envio...</option>
+                    <option value="1">Sedex (Preços imperdiveis)</option>
+                    <option value="2">Pac (Preços imperdiveis)</option>
+                    <option value="3">JetLog (Preços imperdiveis)</option>
+                    <option value="4">Retirada</option>
+                  </select>
+
                 </div>
               </div>
-            </section>
+
+            </div>
 
             </br>
 
+            <div class="product-price">
+              <div style="margin-right: 20px;">
+                <span>
+                  <div>$<?= $linha['Preco'] ?></div>
+                </span>
 
-          </form>
-        </div>
-    </div>
-  </header>
+                <input type="hidden" value="<?= $linha['Preco'] ?>" name="precoLote">
+              </div>
 
-<?php
-      }
-?>
+              <?php
+              if (isset($_SESSION['id'])) {
+              ?>
+                <button class="cart-btn">
+                  Comprar
+                </button>
+
+              <?php
+              } else {
+              ?>
+                <a href="loginCli.php">Faça login</a>
+              <?php
+              }
+              ?>
+
+            </div>
+
+          </div>
+        </section>
+
+      </form>
+
+    <?php
+    }
+    ?>
+
+  </main>
+
+  <!-- Scripts -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js" charset="utf-8"></script>
 </body>
 
 </html>

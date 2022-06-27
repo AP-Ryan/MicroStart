@@ -141,8 +141,9 @@ background: linear-gradient(to left,rgb(153, 206, 255), rgb( 233, 243, 250));">
                         </div>
                     </div>
                     <button type="submit">Cadastrar</button>
-                    <button><a href="../index.php" style="color: white;">Voltar</a></button>
+
                     </form>
+                    <button><a href="../index.php" style="color: white;">Voltar</a></button>
                 </div>
 
 

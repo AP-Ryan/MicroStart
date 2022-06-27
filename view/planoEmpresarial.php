@@ -237,7 +237,7 @@
                     </div>
                 </div>
                 <div class="u-container-style u-layout-cell u-size-30 u-layout-cell-2">
-                    <div class="u-container-layout u-container-layout-2">
+                    <div class="u-container-layout u-container-layout-3">
                     <img class="u-image u-image-contain u-image-default u-image-1" alt="" data-image-width="218" data-image-height="202" data-animation-name="pulse" data-animation-duration="1000" data-animation-delay="0" data-animation-direction="" src="img/logo1.png">
                     </div>
                 </div>
@@ -248,10 +248,10 @@
             <div class="u-repeater u-repeater-1">
                 <div class="u-align-center-md u-align-center-sm u-align-center-xs u-container-style u-grey-5 u-list-item u-radius-30 u-repeater-item u-shape-round u-list-item-1">
                 <div class="u-container-layout u-similar-container u-container-layout-3"><span class="u-custom-color-1 u-custom-item u-file-icon u-icon u-icon-circle u-icon-1"><img src="img/caixa.png" alt=""></span>
-                    <h4 class="u-custom-font u-font-montserrat u-text u-text-default u-text-2">$0</h4>
+                    <h4 class="u-custom-font u-font-montserrat u-text u-text-default u-text-2">Free</h4>
                     <p class="u-text  u-text-3" style="text-decoration: line-through; color: red;"> Frete Grátis&nbsp;<br> Descontos Exclusivos <br> Entregas rápidas<br> taxa adicional por apenas 7%
                     </p>
-                    <a href="" class="u-active-palette-1-light-3 u-border-none u-btn u-btn-round u-button-style u-custom-color-1 u-custom-item u-hover-palette-3-light-1 u-radius-50 u-text-body-alt-color u-text-hover-black u-btn-1">Entrar</a>
+                    <a href="" class="u-active-palette-1-light-3 u-border-none u-btn u-btn-round u-button-style u-custom-color-1 u-custom-item u-hover-palette-3-light-1 u-radius-50 u-text-body-alt-color u-text-hover-black u-btn-1">Ativo</a>
                 </div>
                 </div>
                 <div class="u-align-center-md u-align-center-sm u-align-center-xs u-container-style u-grey-5 u-list-item u-radius-30 u-repeater-item u-shape-round u-list-item-2">
