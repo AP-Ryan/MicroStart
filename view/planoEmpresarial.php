@@ -8,6 +8,7 @@ session_start();
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta charset="utf-8">
     <title>Plano Empresarial</title>
+    <link rel="icon" type="image/x-icon" href="img/logoMS.png">
     <!-- css -->
     <link rel="stylesheet" href="./css/planoEm.css" media="screen">
     <!-- fontes -->

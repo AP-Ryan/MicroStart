@@ -22,6 +22,7 @@ if ($nomeProduto == null) {
   <meta name="robots" content="noindex,follow" />
   <link rel="stylesheet" href="css/styleDetalhe.css">
   <title><?= $nomeProduto ?></title>
+  <link rel="icon" type="image/x-icon" href="img/logoMS.png">
 </head>
 
 <?php

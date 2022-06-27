@@ -22,6 +22,7 @@ include_once '../model/ProdutoDao.php';
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
 
     <title>Produtos</title>
+    <link rel="icon" type="image/x-icon" href="img/logoMS.png">
 </head>
 
 <body style="background: -webkit-linear-gradient(to left, rgb(153, 206, 255), rgb( 233, 243, 250));
