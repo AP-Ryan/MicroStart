@@ -220,7 +220,7 @@
   <body class="u-body u-xl-mode">
   <?php
         if(!isset($_SESSION['id'])) {
-            include_once 'navs/navAlt.php'; 
+            include_once 'navs/navAlt.php';
         }
         else {
             include_once 'navs/navSairAlt.php';

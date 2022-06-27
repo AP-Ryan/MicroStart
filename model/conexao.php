@@ -25,7 +25,7 @@ final class Conexao
                 self::$instance = new PDO("mysql:host=micro-start.mysql.database.azure.com; dbname=microstart; charset=utf8", 'Micro_Start','Etec2022', array(
                     PDO::MYSQL_ATTR_SSL_CA => 'cert/DigiCertGlobalRootCA.crt',
                     PDO::MYSQL_ATTR_SSL_VERIFY_SERVER_CERT => false,
-                ));
+                ),);
             } 
              catch (PDOException $erro) {
                 echo 'Erro no banco de dados: ' . $erro->getMessage();
