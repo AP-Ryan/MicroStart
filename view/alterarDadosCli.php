@@ -1,3 +1,6 @@
+<?php
+session_start();
+?>
 <!DOCTYPE html>
 <html lang="pt-br">
 
@@ -18,7 +21,6 @@
 
     <main>
         <?php
-        session_start();
         include_once '../controller/verificaLogin.php';
         require_once '../model/ClienteDao.php';
         require_once '../model/ProdutoDao.php';
