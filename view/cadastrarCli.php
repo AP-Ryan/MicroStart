@@ -72,17 +72,7 @@ background: linear-gradient(to left,rgb(153, 206, 255), rgb( 233, 243, 250));">
                                 <input maxlength="10" required type="text" name="tel1" id="cxTel1">
                             </div>
 
-                            <div id="form-cadastro-ddd2">
-                                <Strong>Opcional</Strong>
-                                <label for="cxDdd1">DDD</label>
-                                <input maxlength="2" type="text" name="ddd2" id="cxDdd2">
-                            </div>
 
-                            <div id="form-cadastro-tel2">
-                                <Strong>Opcional</Strong>
-                                <label for="cxTel2">Celular</label>
-                                <input maxlength="10" type="text" name="tel2" id="cxTel2">
-                            </div>
 
                             <div id="form-cadastro-cnpj">
                                 <label for="cxCNPJ">CNPJ:</label>

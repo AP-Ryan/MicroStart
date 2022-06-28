@@ -20,8 +20,7 @@
         //tabela telefone
         $cliente->setDDD1($ddd1);
         $cliente->setTelefone1($tel1);
-        $cliente->setDDD2($ddd2);
-        $cliente->setTelefone2($tel2);
+
 
         //tabela endereco
         $cliente->setCep($cep);
