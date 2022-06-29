@@ -65,19 +65,6 @@ background: linear-gradient(to left,rgb(153, 206, 255), rgb( 233, 243, 250));">
                     <span class="visually-hidden">Next</span>
                 </button>
             </div>
-            <!-- FILTRO-->
-            <div class="filtro">
-                <select class="form-select form-select-lg mb-3 " style="width: 180px; justify-content:right;">
-                    <option selected class="img">Filtrar </option>
-                    <option value="1">Moda </option>
-                    <option value="2">Tecnologia</option>
-                    <option value="3">Eletrodomésticos</option>
-                    <option value="4">Construção</option>
-                    <option value="5">Outros</option>
-
-                </select>
-            </div>
-            <!-- FILTRO-->
             </br>
             </br>
             </br>
