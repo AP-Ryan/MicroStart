@@ -431,6 +431,11 @@ display: flex;
     align-items: flex-start;
     align-content: flex-start;
     display: flex;
+
+    max-width: 15ch;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
 }
 
 .btnComprar {
