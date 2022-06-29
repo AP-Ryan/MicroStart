@@ -71,6 +71,11 @@ html, body {
     opacity: 1;
     border-radius: 10px;
   }
+
+  .imgProd{
+    width: 500px;
+    height: 500px;
+  }
   
   
   /* Right Column */
@@ -202,7 +207,7 @@ html, body {
   
   @media only screen and (max-width: 900px) {
 
-    img{
+    .imgProd{
       width: 300px;
       height: 300px;
     }

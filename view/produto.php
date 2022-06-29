@@ -72,7 +72,7 @@ background: linear-gradient(to left,rgb(153, 206, 255), rgb( 233, 243, 250));">
 
               <!-- Left Column / Headphones Image -->
               <div class="left-column">
-                <img alt="" style="width: 500px; height: 500px;" src="img/produtos/<?= $linha['imagem'] ?>">
+                <img alt="" class="imgProd" src="img/produtos/<?= $linha['imagem'] ?>">
               </div>
 
             </tr>
