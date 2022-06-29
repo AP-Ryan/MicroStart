@@ -37,9 +37,7 @@ include_once '../controller/verificaLogado.php';
     </script>
 </head>
 
-<body style="background: -webkit-linear-gradient(to left, rgb(153, 206, 255), rgb( 233, 243, 250));
-
-background: linear-gradient(to left,rgb(153, 206, 255), rgb( 233, 243, 250));">
+<body style="background: linear-gradient(to top,rgb(153, 206, 255), rgb( 233, 243, 250));">
     <main>
         <div class="container" id="container">
             <div class="form-container">

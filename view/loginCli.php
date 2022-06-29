@@ -1,7 +1,7 @@
 <?php
 
 session_start();
-Include_once '../controller/verificaLogado.php';
+include_once '../controller/verificaLogado.php';
 
 ?>
 
@@ -20,8 +20,8 @@ Include_once '../controller/verificaLogado.php';
 </head>
 
 <body style="background: -webkit-linear-gradient(to left, rgb(153, 206, 255), rgb( 233, 243, 250));
-
 background: linear-gradient(to left,rgb(153, 206, 255), rgb( 233, 243, 250));">
+
     <main>
         <div class="container" id="container">
 
@@ -56,16 +56,11 @@ background: linear-gradient(to left,rgb(153, 206, 255), rgb( 233, 243, 250));">
 </html>
 
 <style>
-        
     @import url('https://fonts.googleapis.com/css?family=Montserrat:400,800');
 
 
     body {
         background: #f6f5f7;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        flex-direction: column;
         font-family: 'Montserrat', sans-serif;
         height: 100vh;
         margin: -20px 0 50px;
@@ -74,10 +69,6 @@ background: linear-gradient(to left,rgb(153, 206, 255), rgb( 233, 243, 250));">
     h1 {
         font-weight: bold;
         margin: 0;
-    }
-
-    h1.titulo{
-
     }
 
     h2 {
@@ -105,8 +96,8 @@ background: linear-gradient(to left,rgb(153, 206, 255), rgb( 233, 243, 250));">
 
     button {
         border-radius: 20px;
-        border: 1px solid rgb( 71, 138, 201);
-        background-color: rgb( 71, 138, 201);
+        border: 1px solid rgb(71, 138, 201);
+        background-color: rgb(71, 138, 201);
         color: #FFFFFF;
         font-size: 12px;
         font-weight: bold;
@@ -121,8 +112,8 @@ background: linear-gradient(to left,rgb(153, 206, 255), rgb( 233, 243, 250));">
     }
 
     button:hover {
-        border: 2px solid rgb( 100, 187, 250);
-        box-shadow: 2px 5px 8px rgba(0,0,0,0.25);
+        border: 2px solid rgb(100, 187, 250);
+        box-shadow: 2px 5px 8px rgba(0, 0, 0, 0.25);
     }
 
     button:focus {
@@ -154,16 +145,30 @@ background: linear-gradient(to left,rgb(153, 206, 255), rgb( 233, 243, 250));">
         width: 100%;
     }
 
+    main {
+        width: 100%;
+        height: 100%;
+        margin: 0;
+        padding: 0;
+    }
+
     .container {
         background-color: #fff;
         border-radius: 10px;
-        box-shadow: 0 14px 28px rgba(0,0,0,0.25), 
-                0 10px 10px rgba(0,0,0,0.22);
-        position: relative;
-        overflow: hidden;
+        box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25),
+            0 10px 10px rgba(0, 0, 0, 0.22);
+
         width: 768px;
         max-width: 100%;
         min-height: 480px;
+
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        margin-left: -384px;
+        /* half width*/
+        margin-top: -240px;
+        /* half height*/
     }
 
     .form-container {
@@ -198,9 +203,9 @@ background: linear-gradient(to left,rgb(153, 206, 255), rgb( 233, 243, 250));">
     }
 
     .overlay {
-        background: rgb( 71, 138, 201);
-        background: -webkit-linear-gradient(to left, rgb( 71, 138, 201), rgb( 233, 243, 250));
-        background: linear-gradient(to left, rgb( 71, 138, 201), rgb( 233, 243, 250));
+        background: rgb(71, 138, 201);
+        background: -webkit-linear-gradient(to left, rgb(71, 138, 201), rgb(233, 243, 250));
+        background: linear-gradient(to left, rgb(71, 138, 201), rgb(233, 243, 250));
         background-repeat: no-repeat;
         background-size: cover;
         background-position: 0 0;
@@ -233,4 +238,79 @@ background: linear-gradient(to left,rgb(153, 206, 255), rgb( 233, 243, 250));">
         transform: translateX(0);
     }
 
+    @media only screen and (max-width: 550px) {
+
+        .container {
+
+            width: 400px;
+            height: 400px;
+
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            margin-left: -200px;
+            /* half width*/
+            margin-top: -200px;
+            /* half height*/
+        }
+
+        input {
+            margin-left: -45px;
+            width: 160%;
+        }
+
+
+        .form-container {
+
+            position: absolute;
+            top: 0;
+            height: 100%;
+            transition: all 0.6s ease-in-out;
+        }
+
+        .overlay-panel {
+            width: 30%;
+        }
+
+        button.ghost {
+            margin-top: -10px;
+        }
+
+    }
+
+    @media screen and (max-width: 750px) and (min-width: 550px){
+
+        .container {
+
+            width: 600px;
+            height: 500px;
+
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            margin-left: -300px;
+            /* half width*/
+            margin-top: -250px;
+            /* half height*/
+        }
+
+
+        .form-container {
+
+            position: absolute;
+            top: 0;
+            height: 100%;
+            transition: all 0.6s ease-in-out;
+        }
+
+        .overlay-panel {
+            left: 43%;
+            width: 50%;
+        }
+
+        button.ghost {
+            margin-top: -10px;
+        }
+
+    }
 </style>
