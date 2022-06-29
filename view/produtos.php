@@ -67,9 +67,7 @@ background: linear-gradient(to left,rgb(153, 206, 255), rgb( 233, 243, 250));">
             </div>
             </br>
             </br>
-            </br>
-            </br>
-            </br>
+
 
             <section class="sec">
 
