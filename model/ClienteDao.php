@@ -165,14 +165,7 @@ class ClienteDao
         $verificarTel->bindValue(2, $cliente->getDDD1());
         $verificarTel->execute();
 
-        $sql2 = 'SELECT telefone, ddd FROM telefone_cli WHERE telefone = ? AND ddd = ?';
-
-        $verificarTel2 = Conexao::getInstance()->prepare($sql2);
-        $verificarTel2->bindValue(1, $cliente->getTelefone2());
-        $verificarTel2->bindValue(2, $cliente->getDDD2());
-        $verificarTel2->execute();
-
-        if($verificarTel->rowCount() > 0 || $verificarTel2->rowCount() > 0) {
+        if($verificarTel->rowCount() > 0) {
             echo " <script>
                         alert('Telefone já cadastrado');
 

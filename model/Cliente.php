@@ -82,7 +82,7 @@ class Cliente
     }
 
      //tabela telefone
-     private $telefone1, $ddd1, $telefone2, $ddd2;
+     private $telefone1, $ddd1;
 
      public function setTelefone1($telefone1){
          $this -> telefone1 = $telefone1;
@@ -98,22 +98,6 @@ class Cliente
  
      public function getDDD1(){
          return $this -> ddd1;
-     }
-
-     public function setTelefone2($telefone2){
-         $this -> telefone2 = $telefone2;
-     }
- 
-     public function getTelefone2(){
-         return $this -> telefone2;
-     }
- 
-     public function setDDD2($ddd2){
-         $this -> ddd2 = $ddd2;
-     }
- 
-     public function getDDD2(){
-         return $this -> ddd2;
      }
 
      // tabela endereço
