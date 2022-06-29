@@ -110,7 +110,7 @@ background: linear-gradient(to left,rgb(153, 206, 255), rgb( 233, 243, 250));">
                     Escolha quantos lotes deseja:
                   </label>
                   <input required min="1" max="<?= $linha['Disponivel'] ?>" type="number" name="quantidadeComprar" id="cxDisponivel">
-
+                  <br>
                   <select required="" name="tipoEnvio" id="envio">
                     <option disabled="" selected="">Metodo de Envio...</option>
                     <option value="1">Sedex (Preços imperdiveis)</option>
