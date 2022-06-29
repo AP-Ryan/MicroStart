@@ -430,9 +430,8 @@ display: flex;
     justify-content: flex-start;
     align-items: flex-start;
     align-content: flex-start;
-    display: flex;
 
-    max-width: 15ch;
+    max-width: 20ch;
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap;
