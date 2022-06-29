@@ -30,10 +30,6 @@ class ClienteDao
         $cadastrarTel->bindValue(2, $cliente->getTelefone1());
         $cadastrarTel->bindValue(3, $cliente->getDDD1());
         $cadastrarTel->execute();
-        $cadastrarTel->bindValue(1, $id);
-        $cadastrarTel->bindValue(2, $cliente->getTelefone2());
-        $cadastrarTel->bindValue(3, $cliente->getDDD2());
-        $cadastrarTel->execute();
 
         //tabela Endereco
 
