@@ -36,7 +36,7 @@ background: linear-gradient(to left,rgb(153, 206, 255), rgb( 233, 243, 250));">
                         <label for="cxSenha">Senha:</label>
                         <input required type="password" name="senha" id="cxSenha">
                     </div>
-                    <button type="submit">Entrar</button>
+                    <button class="btnEnv" type="submit">Entrar</button>
                 </form>
             </div>
             <div class="overlay-container">
@@ -238,38 +238,64 @@ background: linear-gradient(to left,rgb(153, 206, 255), rgb( 233, 243, 250));">
         transform: translateX(0);
     }
 
-    @media only screen and (max-width: 550px) {
+    @media only screen and (max-width: 500px) {
 
         .container {
 
-            width: 385px;
-            height: 400px;
+            width: 350px;
+            max-width: 100%;
+            height: 600px;
 
             position: absolute;
             top: 50%;
             left: 50%;
-            margin-left: -192px;
+            margin-left: -175px;
             /* half width*/
-            margin-top: -200px;
+            margin-top: -300px;
             /* half height*/
-        }
-
-        input {
-            margin-left: -45px;
-            width: 160%;
         }
 
 
         .form-container {
 
             position: absolute;
-            top: 0;
-            height: 100%;
+            top: 7%;
+            height: 36%;
+            width: 100%;
             transition: all 0.6s ease-in-out;
         }
 
+        .sign-in-container {
+            left: 0;
+            width: 90%;
+            z-index: 2;
+        }
+
+        .overlay-container {
+            top: 48%;
+            left: 0%;
+            width: 100%;
+            height: 52%;
+
+            border-radius: 0 0 10px 10px;
+        }
+
+        .overlay {
+            background: rgb(71, 138, 201);
+            background: linear-gradient(to left, rgb(71, 138, 201), rgb(111, 177, 223));
+
+            left: 0%;
+            height: 100%;
+            width: 100%;
+        }
+
         .overlay-panel {
-            width: 30%;
+            height: 100%;
+            width: 80%;
+        }
+
+        .btnEnv{
+            margin-left: 15px;
         }
 
         button.ghost {
@@ -278,7 +304,7 @@ background: linear-gradient(to left,rgb(153, 206, 255), rgb( 233, 243, 250));">
 
     }
 
-    @media screen and (max-width: 750px) and (min-width: 550px) {
+    @media screen and (max-width: 750px) and (min-width: 500px) {
 
         .container {
 
@@ -301,12 +327,13 @@ background: linear-gradient(to left,rgb(153, 206, 255), rgb( 233, 243, 250));">
             position: absolute;
             top: 7%;
             height: 36%;
+            width: 100%;
             transition: all 0.6s ease-in-out;
         }
 
         .sign-in-container {
             left: 0;
-            width: 50%;
+            width: 100%;
             z-index: 2;
         }
 
@@ -315,9 +342,14 @@ background: linear-gradient(to left,rgb(153, 206, 255), rgb( 233, 243, 250));">
             left: 0%;
             width: 100%;
             height: 52%;
+
+            border-radius: 0 0 10px 10px;
         }
 
         .overlay {
+            background: rgb(71, 138, 201);
+            background: linear-gradient(to left, rgb(71, 138, 201), rgb(111, 177, 223));
+
             left: 0%;
             height: 100%;
             width: 100%;
