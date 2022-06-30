@@ -125,7 +125,7 @@ session_start();
         <div class="u-container-layout u-valign-middle-lg u-valign-middle-md u-valign-middle-sm u-valign-middle-xl u-container-layout-1">
           <h1 class="u-custom-font u-text u-text-palette-1-light-1 u-text-1">MicroStart</h1>
           <p class="u-text u-text-2">A MicroStart é uma companhia que busca conectar pequenos empreendedores com fornecedores nacionais de forma rápida e fácil, impulsionando o seu próprio negócio!</p>
-          <a href="produtos.php" class="u-active-palette-1-light-1 u-border-none u-btn u-btn-round u-button-style u-hover-palette-1-light-1 u-palette-1-base u-radius-6 u-text-active-white u-text-body-alt-color u-text-hover-white u-btn-2">Empreenda conosco!</a>
+          <a href="view/produtos.php" class="u-active-palette-1-light-1 u-border-none u-btn u-btn-round u-button-style u-hover-palette-1-light-1 u-palette-1-base u-radius-6 u-text-active-white u-text-body-alt-color u-text-hover-white u-btn-2">Empreenda conosco!</a>
         </div>
       </div>
     </div>
