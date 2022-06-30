@@ -242,13 +242,13 @@ background: linear-gradient(to left,rgb(153, 206, 255), rgb( 233, 243, 250));">
 
         .container {
 
-            width: 400px;
+            width: 385px;
             height: 400px;
 
             position: absolute;
             top: 50%;
             left: 50%;
-            margin-left: -200px;
+            margin-left: -192px;
             /* half width*/
             margin-top: -200px;
             /* half height*/
@@ -278,19 +278,20 @@ background: linear-gradient(to left,rgb(153, 206, 255), rgb( 233, 243, 250));">
 
     }
 
-    @media screen and (max-width: 750px) and (min-width: 550px){
+    @media screen and (max-width: 750px) and (min-width: 550px) {
 
         .container {
 
-            width: 600px;
-            height: 500px;
+            width: 500px;
+            max-width: 100%;
+            height: 600px;
 
             position: absolute;
             top: 50%;
             left: 50%;
-            margin-left: -300px;
+            margin-left: -250px;
             /* half width*/
-            margin-top: -250px;
+            margin-top: -300px;
             /* half height*/
         }
 
@@ -298,14 +299,33 @@ background: linear-gradient(to left,rgb(153, 206, 255), rgb( 233, 243, 250));">
         .form-container {
 
             position: absolute;
-            top: 0;
-            height: 100%;
+            top: 7%;
+            height: 36%;
             transition: all 0.6s ease-in-out;
         }
 
-        .overlay-panel {
-            left: 43%;
+        .sign-in-container {
+            left: 0;
             width: 50%;
+            z-index: 2;
+        }
+
+        .overlay-container {
+            top: 48%;
+            left: 0%;
+            width: 100%;
+            height: 52%;
+        }
+
+        .overlay {
+            left: 0%;
+            height: 100%;
+            width: 100%;
+        }
+
+        .overlay-panel {
+            height: 100%;
+            width: 84%;
         }
 
         button.ghost {
